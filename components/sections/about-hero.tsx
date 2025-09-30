@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { Download, MapPin, Mail, Calendar, ExternalLink } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { motion } from 'framer-motion'
+import { Download, MapPin, Mail, Calendar, ExternalLink } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 
 export function AboutHero() {
   return (
@@ -29,7 +29,7 @@ export function AboutHero() {
                   <p className="text-muted-foreground mb-4">Mobile Application Developer</p>
                   <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-2">
                     <MapPin className="h-4 w-4" />
-                    <span>Malaysia</span>
+                    <span>Saudia Arabia</span>
                   </div>
                   <div className="flex items-center justify-center gap-2 text-sm text-green-400">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
@@ -69,16 +69,17 @@ export function AboutHero() {
           >
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-                Building the future of{" "}
+                Building the future of{' '}
                 <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
                   mobile experiences
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a Mobile Application Developer passionate about crafting accessible, pixel-perfect user interfaces
-                that blend thoughtful design with robust engineering. My favorite work lies at the intersection of
-                design and development, creating experiences that not only look great but are meticulously built for
-                performance and usability.
+                I'm a Mobile Application Developer passionate about crafting accessible,
+                pixel-perfect user interfaces that blend thoughtful design with robust engineering.
+                My favorite work lies at the intersection of design and development, creating
+                experiences that not only look great but are meticulously built for performance and
+                usability.
               </p>
             </div>
 
@@ -87,9 +88,9 @@ export function AboutHero() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-3 text-green-400">Current Focus</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Currently working as a Full Stack Mobile Application Developer at Ventionex Sdn. Bhd., specializing
-                    in React Native and Expo development. I contribute to the creation and maintenance of production
-                    mobile applications.
+                    Currently working as a Full Stack Mobile Application Developer at Ventionex Sdn.
+                    Bhd., specializing in React Native and Expo development. I contribute to the
+                    creation and maintenance of production mobile applications.
                   </p>
                 </CardContent>
               </Card>
@@ -98,8 +99,9 @@ export function AboutHero() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-3 text-blue-400">What I'm Looking For</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    I'm interested in roles that challenge me to grow as a mobile developer, working on complex UI
-                    systems, performance optimization, and cross-platform solutions that make a real impact.
+                    I'm interested in roles that challenge me to grow as a mobile developer, working
+                    on complex UI systems, performance optimization, and cross-platform solutions
+                    that make a real impact.
                   </p>
                 </CardContent>
               </Card>
@@ -109,19 +111,21 @@ export function AboutHero() {
               <h3 className="text-2xl font-bold mb-4">My Approach</h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  I believe that great mobile applications start with understanding the user's needs and constraints.
-                  Every interaction should feel natural and purposeful, whether it's a simple button press or a complex
-                  multi-step workflow.
+                  I believe that great mobile applications start with understanding the user's needs
+                  and constraints. Every interaction should feel natural and purposeful, whether
+                  it's a simple button press or a complex multi-step workflow.
                 </p>
                 <p>
-                  My development process is UI-first and performance-focused. I start by building the interface
-                  components, ensuring they work seamlessly across different screen sizes and device capabilities, then
-                  integrate the backend functionality with careful attention to loading states and error handling.
+                  My development process is UI-first and performance-focused. I start by building
+                  the interface components, ensuring they work seamlessly across different screen
+                  sizes and device capabilities, then integrate the backend functionality with
+                  careful attention to loading states and error handling.
                 </p>
                 <p>
-                  I'm particularly passionate about creating reusable component systems that scale with the product and
-                  team. Clean, well-documented code isn't just about maintainability—it's about enabling the entire team
-                  to move faster and build better experiences.
+                  I'm particularly passionate about creating reusable component systems that scale
+                  with the product and team. Clean, well-documented code isn't just about
+                  maintainability—it's about enabling the entire team to move faster and build
+                  better experiences.
                 </p>
               </div>
             </div>

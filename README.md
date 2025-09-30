@@ -10,8 +10,6 @@ A production-ready portfolio website showcasing mobile application development e
 - **Performance Optimized** with fast loading times
 - **Accessibility First** with WCAG 2.1 compliance
 - **SEO Optimized** with proper meta tags and structured data
-- **Component Gallery** showcasing reusable UI components
-- **Blog System** for sharing development insights
 - **Contact Form** with validation and success states
 
 ## 🛠 Tech Stack
@@ -28,10 +26,12 @@ A production-ready portfolio website showcasing mobile application development e
 ## 🚀 Development
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
 
 ### Installation
+
 \`\`\`bash
 git clone https://github.com/mohammed-baabad/portfolio
 cd portfolio
@@ -39,11 +39,13 @@ npm install
 \`\`\`
 
 ### Development Server
+
 \`\`\`bash
 npm run dev
 \`\`\`
 
 ### Build for Production
+
 \`\`\`bash
 npm run build
 npm start
@@ -52,21 +54,20 @@ npm start
 ## 📁 Project Structure
 
 \`\`\`
-├── app/                    # Next.js App Router pages
-├── components/            # Reusable UI components
-│   ├── ui/               # Base UI components
-│   ├── sections/         # Page sections
-│   ├── 3d/              # Three.js components
-│   └── showcase/         # Component gallery items
-├── data/                 # Static data and content
-├── lib/                  # Utility functions
-├── public/               # Static assets
-└── styles/               # Global styles
+├── app/ # Next.js App Router pages
+├── components/ # Reusable UI components
+│ ├── ui/ # Base UI components
+│ └── sections/ # Page sections
+├── data/ # Static data and content
+├── lib/ # Utility functions
+├── public/ # Static assets
+└── styles/ # Global styles
 \`\`\`
 
 ## 🔧 Configuration
 
 ### Environment Variables
+
 Create a `.env.local` file:
 \`\`\`env
 NEXT_PUBLIC_SITE_URL=https://your-domain.com
@@ -74,7 +75,9 @@ NEXT_PUBLIC_GA_ID=your-google-analytics-id
 \`\`\`
 
 ### Deployment
+
 This project is optimized for Vercel deployment:
+
 1. Connect your GitHub repository to Vercel
 2. Set environment variables in Vercel dashboard
 3. Deploy automatically on push to main branch

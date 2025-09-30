@@ -1,32 +1,32 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Mail, MapPin, Clock, Phone } from "lucide-react"
+import { motion } from 'framer-motion'
+import { Card, CardContent } from '@/components/ui/card'
+import { Mail, MapPin, Clock, Phone } from 'lucide-react'
 
 const contactInfo = [
   {
     icon: Mail,
-    label: "Email",
-    value: "mohammed.baabad@example.com",
-    href: "mailto:mohammed.baabad@example.com",
+    label: 'Email',
+    value: 'mbaabad1234@gmail.com',
+    href: 'mailto:mbaabad1234@gmail.com',
   },
   {
     icon: Phone,
-    label: "Phone",
-    value: "+60 12-345-6789",
-    href: "tel:+60123456789",
+    label: 'Phone',
+    value: '+966 50 947 3092',
+    href: 'tel:+966509473092',
   },
   {
     icon: MapPin,
-    label: "Location",
-    value: "Kuala Lumpur, Malaysia",
+    label: 'Location',
+    value: 'Saudi Arabia',
     href: null,
   },
   {
     icon: Clock,
-    label: "Timezone",
-    value: "GMT+8 (MYT)",
+    label: 'Timezone',
+    value: 'GMT+3 (MYT)',
     href: null,
   },
 ]
@@ -56,7 +56,10 @@ export function ContactInfo() {
                 <div>
                   <p className="text-sm text-muted-foreground">{item.label}</p>
                   {item.href ? (
-                    <a href={item.href} className="font-medium hover:text-primary transition-colors">
+                    <a
+                      href={item.href}
+                      className="font-medium hover:text-primary transition-colors"
+                    >
                       {item.value}
                     </a>
                   ) : (

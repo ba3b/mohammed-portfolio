@@ -1,11 +1,10 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { ArrowRight, Download, Github, Linkedin, MapPin, Mail } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { PhoneMockup3D } from "@/components/3d/phone-mockup"
-import { ParticleField } from "@/components/3d/particle-field"
-import Link from "next/link"
+import { motion } from 'framer-motion'
+import { ArrowRight, Download, Github, Linkedin, MapPin, Mail } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+
+import Link from 'next/link'
 
 export function HeroSection() {
   const containerVariants = {
@@ -15,17 +14,14 @@ export function HeroSection() {
       transition: {
         staggerChildren: 0.1,
         delayChildren: 0.2,
+        when: 'beforeChildren',
       },
     },
   }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
+    visible: { opacity: 1, y: 0 },
   }
 
   return (
@@ -33,7 +29,6 @@ export function HeroSection() {
       {/* Animated background with particles */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-muted/20" />
-        <ParticleField />
       </div>
 
       {/* Grid pattern overlay */}
@@ -42,25 +37,37 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
-          <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-8 lg:pr-8">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="space-y-8 lg:pr-8"
+          >
             <div className="space-y-6">
-              <motion.div variants={itemVariants} className="flex items-center gap-2 text-muted-foreground">
+              <motion.div
+                variants={itemVariants}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                className="flex items-center gap-2 text-muted-foreground"
+              >
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                 <span className="text-sm font-medium">Available for opportunities</span>
               </motion.div>
 
               <motion.h1
                 variants={itemVariants}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight"
               >
-                Mohammed{" "}
+                Mohammed{' '}
                 <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Baabad
                 </span>
               </motion.h1>
 
               <motion.div variants={itemVariants} className="space-y-2">
-                <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Mobile Application Developer</h2>
+                <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
+                  Mobile Application Developer
+                </h2>
                 <div className="flex items-center gap-4 text-muted-foreground">
                   <div className="flex items-center gap-1">
                     <MapPin className="h-4 w-4" />
@@ -75,27 +82,35 @@ export function HeroSection() {
 
               <motion.p
                 variants={itemVariants}
-                className="text-lg text-muted-foreground max-w-2xl text-pretty leading-relaxed"
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
+                className="text-xl md:text-2xl text-muted-foreground max-w-2xl text-balance"
               >
-                Building production mobile apps and complex UI systems using{" "}
-                <span className="text-green-400 font-medium">React Native (Expo)</span> and{" "}
-                <span className="text-blue-400 font-medium">Flutter</span>. UI-led, performance-first, production-ready
-                solutions.
+                Building production mobile apps and complex UI systems using{' '}
+                <span className="text-green-400 font-medium">React Native</span> and{' '}
+                <span className="text-blue-400 font-medium">Flutter</span>. UI-led,
+                performance-first, production-ready solutions.
               </motion.p>
             </div>
 
             {/* Experience highlight */}
             <motion.div
               variants={itemVariants}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
               className="p-4 rounded-lg bg-muted/50 border border-border/50 backdrop-blur-sm"
             >
               <div className="text-sm text-muted-foreground mb-1">Currently at</div>
               <div className="font-semibold text-foreground">Ventionex Sdn. Bhd.</div>
-              <div className="text-sm text-muted-foreground">Full Stack Mobile Application Developer • ~1 year</div>
+              <div className="text-sm text-muted-foreground">
+                Full Stack Mobile Application Developer • ~1 year
+              </div>
             </motion.div>
 
             {/* CTA Buttons */}
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
+            <motion.div
+              variants={itemVariants}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
+              className="flex flex-wrap gap-4"
+            >
               <Button
                 asChild
                 size="lg"
@@ -107,14 +122,22 @@ export function HeroSection() {
                 </Link>
               </Button>
 
-              <Button variant="outline" size="lg" className="focus-ring bg-background/50 backdrop-blur-sm">
+              <Button
+                variant="outline"
+                size="lg"
+                className="focus-ring bg-background/50 backdrop-blur-sm"
+              >
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>
             </motion.div>
 
             {/* Social Links */}
-            <motion.div variants={itemVariants} className="flex gap-3">
+            <motion.div
+              variants={itemVariants}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+              className="flex gap-3"
+            >
               <Button variant="ghost" size="icon" className="focus-ring hover:bg-muted/50">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
@@ -126,7 +149,11 @@ export function HeroSection() {
             </motion.div>
 
             {/* Quick Stats */}
-            <motion.div variants={itemVariants} className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50">
+            <motion.div
+              variants={itemVariants}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.6 }}
+              className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50"
+            >
               <div className="text-center lg:text-left">
                 <div className="text-3xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
                   3+
@@ -152,11 +179,11 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8, rotateY: -20 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-            transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }}
-            className="relative h-[600px] lg:h-[700px]"
+            transition={{ delay: 0.5, duration: 1.2, ease: 'easeOut' }}
+            className="relative h-[600px] lg:h-[700px] flex items-center justify-center"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
-            <PhoneMockup3D />
+            <div className="text-white/50 text-lg">3D Component Removed</div>
           </motion.div>
         </div>
       </div>
@@ -172,12 +199,12 @@ export function HeroSection() {
           <span className="text-xs font-medium">Scroll to explore</span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: 'easeInOut' }}
             className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center"
           >
             <motion.div
               animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: 'easeInOut' }}
               className="w-1 h-3 bg-muted-foreground/50 rounded-full mt-2"
             />
           </motion.div>

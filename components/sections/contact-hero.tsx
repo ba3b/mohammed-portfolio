@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { Mail, MessageSquare, Coffee } from "lucide-react"
+import { motion } from 'framer-motion'
+import { Mail, MessageSquare, Coffee } from 'lucide-react'
 
 export function ContactHero() {
   return (
@@ -25,12 +25,15 @@ export function ContactHero() {
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
             Let's Build Something
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Amazing</span>
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              {' '}
+              Amazing
+            </span>
           </h1>
 
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
-            Ready to discuss your next mobile app project? I'm always excited to collaborate on innovative solutions and
-            bring ideas to life.
+            Ready to discuss your next mobile app project? I'm always excited to collaborate on
+            innovative solutions and bring ideas to life.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
@@ -41,7 +44,7 @@ export function ContactHero() {
             <span>•</span>
             <span>Usually responds within 24 hours</span>
             <span>•</span>
-            <span>Based in Malaysia</span>
+            <span>Based in Saudi Arabia</span>
           </div>
         </motion.div>
       </div>
