@@ -39,9 +39,9 @@ export const resumeData: ResumeData = {
   ],
   education: [
     {
-      degree: 'Bachelor of Computer Science', // TODO: Replace with actual degree
-      school: 'UTM', // TODO: Replace with actual university
-      year: '2025', // TODO: Replace with actual year
+      degree: 'Bachelor of Computer Science',
+      school: 'UTM',
+      year: '2025',
       location: 'Malaysia',
     },
   ],
