@@ -60,7 +60,7 @@ export function HeroSection() {
               >
                 Mohammed{' '}
                 <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Baabad
+                  Baabbad
                 </span>
               </motion.h1>
 
@@ -98,7 +98,7 @@ export function HeroSection() {
               transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
               className="p-4 rounded-lg bg-muted/50 border border-border/50 backdrop-blur-sm"
             >
-              <div className="text-sm text-muted-foreground mb-1">Currently at</div>
+              <div className="text-sm text-muted-foreground mb-1">Worked at</div>
               <div className="font-semibold text-foreground">Ventionex Sdn. Bhd.</div>
               <div className="text-sm text-muted-foreground">
                 Full Stack Mobile Application Developer • ~1 year

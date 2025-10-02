@@ -1,4 +1,4 @@
-# Mohammed Baabad - Portfolio
+# Mohammed Baabbad - Portfolio
 
 A production-ready portfolio website showcasing mobile application development expertise, built with Next.js, TypeScript, and modern web technologies.
 
@@ -33,7 +33,7 @@ A production-ready portfolio website showcasing mobile application development e
 ### Installation
 
 \`\`\`bash
-git clone https://github.com/mohammed-baabad/portfolio
+git clone https://github.com/mohammed-Baabbad/portfolio
 cd portfolio
 npm install
 \`\`\`
@@ -102,6 +102,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Mohammed Baabad - [mohammed.baabad@example.com](mailto:mohammed.baabad@example.com)
+Mohammed Baabbad - [mbaabad1234@gmail.com](mailto:mbaabad1234@gmail.com)
 
-Project Link: [https://github.com/mohammed-baabad/portfolio](https://github.com/mohammed-baabad/portfolio)
+Project Link: [https://github.com/mohammed-Baabbad/portfolio](https://github.com/mohammed-Baabbad/portfolio)

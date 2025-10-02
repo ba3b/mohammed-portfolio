@@ -35,7 +35,7 @@ export function ContactPreview() {
               <CardContent className="p-6 text-center">
                 <Mail className="h-8 w-8 text-green-400 mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">Email</h3>
-                <p className="text-sm text-muted-foreground">mohammed.baabad@example.com</p>
+                <p className="text-sm text-muted-foreground">mbaabad1234@gmail.com</p>
               </CardContent>
             </Card>
 

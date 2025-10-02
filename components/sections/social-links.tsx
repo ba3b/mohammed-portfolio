@@ -1,34 +1,34 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react"
+import { motion } from 'framer-motion'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Github, Linkedin, Twitter, Instagram } from 'lucide-react'
 
 const socialLinks = [
   {
-    name: "GitHub",
+    name: 'GitHub',
     icon: Github,
-    href: "https://github.com/mohammed-baabad",
-    color: "hover:text-gray-900 dark:hover:text-gray-100",
+    href: 'https://github.com/mohammed-Baabbad',
+    color: 'hover:text-gray-900 dark:hover:text-gray-100',
   },
   {
-    name: "LinkedIn",
+    name: 'LinkedIn',
     icon: Linkedin,
-    href: "https://linkedin.com/in/mohammed-baabad",
-    color: "hover:text-blue-600",
+    href: 'https://linkedin.com/in/mohammed-Baabbad',
+    color: 'hover:text-blue-600',
   },
   {
-    name: "Twitter",
+    name: 'Twitter',
     icon: Twitter,
-    href: "https://twitter.com/mohammed_baabad",
-    color: "hover:text-blue-400",
+    href: 'https://twitter.com/mohammed_Baabbad',
+    color: 'hover:text-blue-400',
   },
   {
-    name: "Instagram",
+    name: 'Instagram',
     icon: Instagram,
-    href: "https://instagram.com/mohammed.baabad",
-    color: "hover:text-pink-600",
+    href: 'https://instagram.com/mohammed.Baabbad',
+    color: 'hover:text-pink-600',
   },
 ]
 

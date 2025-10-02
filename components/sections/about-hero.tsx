@@ -25,7 +25,7 @@ export function AboutHero() {
                       MB
                     </div>
                   </div>
-                  <h1 className="text-2xl font-bold mb-2">Mohammed Baabad</h1>
+                  <h1 className="text-2xl font-bold mb-2">Mohammed Baabbad</h1>
                   <p className="text-muted-foreground mb-4">Mobile Application Developer</p>
                   <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-2">
                     <MapPin className="h-4 w-4" />
@@ -40,7 +40,7 @@ export function AboutHero() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-sm">
                     <Mail className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground">mohammed.baabad@example.com</span>
+                    <span className="text-muted-foreground">mbaabad1234@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
                     <Calendar className="h-4 w-4 text-muted-foreground" />

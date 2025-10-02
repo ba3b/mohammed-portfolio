@@ -1,29 +1,29 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { ArrowRight, Code2, Smartphone, Palette } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
+import { motion } from 'framer-motion'
+import { ArrowRight, Code2, Smartphone, Code } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import Link from 'next/link'
 
 const skills = [
   {
     icon: Smartphone,
-    title: "Mobile Development",
-    description: "React Native, Expo, Flutter",
-    color: "text-green-400",
+    title: 'Mobile Development',
+    description: 'React Native, Expo, Flutter',
+    color: 'text-green-400',
   },
   {
     icon: Code2,
-    title: "Frontend Engineering",
-    description: "TypeScript, React, Next.js",
-    color: "text-blue-400",
+    title: 'Frontend Development',
+    description: 'TypeScript, ReactJs, Next.js',
+    color: 'text-blue-400',
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
-    description: "Figma, Design Systems",
-    color: "text-purple-400",
+    icon: Code,
+    title: 'Backend Development',
+    description: 'Express.js, PHP',
+    color: 'text-purple-400',
   },
 ]
 
@@ -32,7 +32,6 @@ export function AboutPreview() {
     <section className="py-24 relative">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -42,16 +41,16 @@ export function AboutPreview() {
           >
             <div className="space-y-4">
               <h2 className="text-4xl md:text-5xl font-bold text-balance">
-                Building the future of{" "}
+                Building the future of{' '}
                 <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
                   mobile experiences
                 </span>
               </h2>
 
               <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
-                I'm a Mobile Application Developer passionate about crafting accessible, pixel-perfect user interfaces
-                that blend thoughtful design with robust engineering. Currently building production apps at Ventionex
-                Sdn. Bhd.
+                I'm a Mobile Application Developer passionate about crafting accessible,
+                pixel-perfect user interfaces that blend thoughtful design with robust engineering.
+                Currently building production apps at Ventionex Sdn. Bhd.
               </p>
             </div>
 
@@ -103,14 +102,22 @@ export function AboutPreview() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-semibold text-foreground">Full Stack Mobile Application Developer</h4>
-                      <span className="text-sm text-muted-foreground">2024 - Present</span>
+                      <h4 className="font-semibold text-foreground">
+                        Full Stack Mobile Application Developer
+                      </h4>
+                      <span className="text-sm text-muted-foreground">Sep 2024 - Sep 2025</span>
                     </div>
                     <p className="text-sm text-muted-foreground mb-3">Ventionex Sdn. Bhd.</p>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Led UI/UX implementation for SOP management application</li>
-                      <li>• Built reusable timeline and dialog components</li>
-                      <li>• Managed Expo SDK upgrades and cross-platform consistency</li>
+                      <li>• Helped build a unified mobile platform from scratch</li>
+                      <li>• Developed the Authentication module</li>
+                      <li>• Built the SOP Management module</li>
+                      <li>• Created the QR Code Scanner module</li>
+                      <li>• Implemented GPS Control page and service</li>
+                      <li>• Optimized UI performance and list rendering</li>
+                      <li>• Enhanced the Chats module for smoother use</li>
+                      <li>• Delivered reusable, scalable components</li>
+                      <li>• Ensured cross-platform consistency</li>
                     </ul>
                   </div>
                 </div>
@@ -125,12 +132,14 @@ export function AboutPreview() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-semibold text-foreground">Final Year Project</h4>
-                      <span className="text-sm text-muted-foreground">2024</span>
+                      <h4 className="font-semibold text-foreground">Virtual Clinic System</h4>
+                      <span className="text-sm text-muted-foreground">Mar - July 2025</span>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-3">University Research</p>
+                    <p className="text-sm text-muted-foreground mb-3">Final Year Project</p>
                     <p className="text-sm text-muted-foreground">
-                      Advanced mobile application development with focus on UI/UX and backend integration
+                      Comprehensive mobile healthcare app enabling patients to book physical,
+                      virtual, and vaccination appointments with integrated chat/calling features,
+                      medical history tracking, and digital prescription management
                     </p>
                   </div>
                 </div>

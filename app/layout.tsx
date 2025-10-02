@@ -18,24 +18,24 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Mohammed Baabad - Mobile Application Developer',
+  title: 'Mohammed Baabbad - Mobile Application Developer',
   description:
     'Mobile Application Developer building production apps with React Native and Flutter. UI-led, performance-first, production-ready.',
   keywords: ['Mobile Developer', 'React Native', 'Flutter', 'Expo', 'UI/UX', 'Frontend'],
-  authors: [{ name: 'Mohammed Baabad' }],
-  creator: 'Mohammed Baabad',
+  authors: [{ name: 'Mohammed Baabbad' }],
+  creator: 'Mohammed Baabbad',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://mohammed-baabad.vercel.app',
-    title: 'Mohammed Baabad - Mobile Application Developer',
+    url: 'https://mohammed-Baabbad.vercel.app',
+    title: 'Mohammed Baabbad - Mobile Application Developer',
     description:
       'Mobile Application Developer building production apps with React Native and Flutter.',
-    siteName: 'Mohammed Baabad Portfolio',
+    siteName: 'Mohammed Baabbad Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mohammed Baabad - Mobile Application Developer',
+    title: 'Mohammed Baabbad - Mobile Application Developer',
     description:
       'Mobile Application Developer building production apps with React Native and Flutter.',
   },

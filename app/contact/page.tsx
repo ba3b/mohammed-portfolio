@@ -6,9 +6,9 @@ import { ContactInfo } from '@/components/sections/contact-info'
 import { SocialLinks } from '@/components/sections/social-links'
 
 export const metadata: Metadata = {
-  title: 'Contact - Mohammed Baabad',
+  title: 'Contact - Mohammed Baabbad',
   description:
-    'Get in touch with Mohammed Baabad for mobile app development opportunities and collaborations.',
+    'Get in touch with Mohammed Baabbad for mobile app development opportunities and collaborations.',
 }
 
 export default function ContactPage() {

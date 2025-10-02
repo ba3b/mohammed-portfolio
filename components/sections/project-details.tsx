@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Code, Lightbulb, Target } from "lucide-react"
-import type { Project } from "@/lib/types"
+import { motion } from 'framer-motion'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { CheckCircle, Code, Lightbulb, Target } from 'lucide-react'
+import type { Project } from '@/lib/types'
 
 interface ProjectDetailsProps {
   project: Project
@@ -49,7 +49,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                 Technical Implementation
               </h3>
               <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
+                {project.technologies.map(tech => (
                   <Badge key={tech} variant="outline" className="text-sm">
                     {tech}
                   </Badge>
@@ -74,12 +74,12 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                   Challenge
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  {project.slug === "sop-management-app" &&
-                    "Enterprise mobile applications require complex state management, real-time updates, and intuitive user interfaces. The challenge was building a comprehensive SOP management system that could handle complex workflows while maintaining excellent user experience."}
-                  {project.slug === "fyp-project" &&
-                    "Academic projects require balancing theoretical research with practical implementation. The challenge was designing a mobile application that demonstrates advanced development concepts while solving a real-world problem."}
-                  {project.slug === "openmp-lab" &&
-                    "Parallel programming requires understanding of concurrent execution, thread safety, and performance optimization. The challenge was implementing efficient algorithms that leverage multi-core processors effectively."}
+                  {project.slug === 'mobile-unified-platform' &&
+                    'Enterprise mobile applications require complex state management, real-time updates, and intuitive user interfaces. The challenge was building a comprehensive SOP management system that could handle complex workflows while maintaining excellent user experience.'}
+                  {project.slug === 'fyp-project' &&
+                    'Academic projects require balancing theoretical research with practical implementation. The challenge was designing a mobile application that demonstrates advanced development concepts while solving a real-world problem.'}
+                  {project.slug === 'openmp-lab' &&
+                    'Parallel programming requires understanding of concurrent execution, thread safety, and performance optimization. The challenge was implementing efficient algorithms that leverage multi-core processors effectively.'}
                 </p>
               </CardContent>
             </Card>
@@ -92,12 +92,12 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                   Solution
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  {project.slug === "sop-management-app" &&
-                    "Built a comprehensive mobile application using React Native and Expo, featuring reusable timeline components, interactive dialogs, and a sophisticated resolution system. Implemented skeleton loading states and optimized performance for enterprise use."}
-                  {project.slug === "fyp-project" &&
-                    "Developing a research-focused mobile application that combines academic rigor with practical implementation. The project showcases advanced UI/UX patterns and backend integration strategies."}
-                  {project.slug === "openmp-lab" &&
-                    "Implemented parallel algorithms using OpenMP directives, focusing on performance benchmarking and optimization techniques. Demonstrated understanding of concurrent programming principles and multi-threading best practices."}
+                  {project.slug === 'mobile-unified-platform' &&
+                    'Built a comprehensive mobile application using React Native and Expo, featuring reusable timeline components, interactive dialogs, and a sophisticated resolution system. Implemented skeleton loading states and optimized performance for enterprise use.'}
+                  {project.slug === 'fyp-project' &&
+                    'Developing a research-focused mobile application that combines academic rigor with practical implementation. The project showcases advanced UI/UX patterns and backend integration strategies.'}
+                  {project.slug === 'openmp-lab' &&
+                    'Implemented parallel algorithms using OpenMP directives, focusing on performance benchmarking and optimization techniques. Demonstrated understanding of concurrent programming principles and multi-threading best practices.'}
                 </p>
               </CardContent>
             </Card>
@@ -110,12 +110,12 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                   Results
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  {project.slug === "sop-management-app" &&
-                    "Successfully delivered a production-ready mobile application that improved workflow efficiency and user satisfaction. The component system became reusable across other company projects, demonstrating scalable architecture."}
-                  {project.slug === "fyp-project" &&
-                    "Project is currently in development phase with comprehensive documentation and research findings. Expected to demonstrate advanced mobile development concepts and contribute to academic knowledge in the field."}
-                  {project.slug === "openmp-lab" &&
-                    "Achieved significant performance improvements through parallel processing, with detailed analysis of speedup and efficiency metrics. Demonstrated mastery of concurrent programming concepts."}
+                  {project.slug === 'mobile-unified-platform' &&
+                    'Successfully delivered a production-ready mobile application that improved workflow efficiency and user satisfaction. The component system became reusable across other company projects, demonstrating scalable architecture.'}
+                  {project.slug === 'fyp-project' &&
+                    'Project is currently in development phase with comprehensive documentation and research findings. Expected to demonstrate advanced mobile development concepts and contribute to academic knowledge in the field.'}
+                  {project.slug === 'openmp-lab' &&
+                    'Achieved significant performance improvements through parallel processing, with detailed analysis of speedup and efficiency metrics. Demonstrated mastery of concurrent programming concepts.'}
                 </p>
               </CardContent>
             </Card>
