@@ -23,6 +23,21 @@ export const resumeData: ResumeData = {
       ],
       technologies: ['React Native', 'Expo', 'TypeScript', 'UI/UX Design'],
     },
+    {
+      company: 'Edumize Sdn. Bhd.',
+      role: 'Graphic Designer and Social Media manager',
+      duration: 'Mar 2023 - Mar 2024',
+      location: 'Johor, Malaysia',
+      description:
+        "As a Graphic Designer and Social Media Manager at Edumize Sdn. Bhd., I spent that year creating visually compelling graphics and developing engaging content to enhance our brand's online presence. My responsibilities included designing marketing materials, managing social media accounts, and making strategic campaigns that boosted audience engagement and increased our follower base. Additionally, I collaborated closely with the marketing team to ensure brand consistency and executed data-driven strategies to optimize our social media performance.",
+      achievements: [
+        'Designed marketing collateral and social media assets',
+        'Managed content calendar and increased audience engagement',
+        'Collaborated with marketing to maintain brand consistency',
+        'Used analytics to iterate and optimize campaign performance',
+      ],
+      technologies: ['Instagram', 'Figma', 'Canva', 'Social Media Analytics'],
+    },
   ],
   skills: [
     { name: 'React Native', category: 'mobile', proficiency: 90 },
