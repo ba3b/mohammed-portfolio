@@ -1,12 +1,12 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { ArrowLeft, ExternalLink, Github, Calendar, User, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
-import Image from "next/image"
-import type { Project } from "@/lib/types"
+import { motion } from 'framer-motion'
+import { ArrowLeft, ExternalLink, Github, Calendar, User, MapPin } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+import Image from 'next/image'
+import type { Project } from '@/lib/types'
 
 interface ProjectHeroProps {
   project: Project
@@ -41,14 +41,17 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           >
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <Badge variant={project.status === "completed" ? "default" : "secondary"} className="text-sm">
-                  {project.status === "completed"
-                    ? "Live Project"
-                    : project.status === "in-progress"
-                      ? "In Progress"
-                      : "Planned"}
+                <Badge
+                  variant={project.status === 'completed' ? 'default' : 'secondary'}
+                  className="text-sm"
+                >
+                  {project.status === 'completed'
+                    ? 'Live Project'
+                    : project.status === 'in-progress'
+                    ? 'In Progress'
+                    : 'Planned'}
                 </Badge>
-                {project.status === "in-progress" && project.slug === "fyp-project" && (
+                {project.status === 'in-progress' && project.slug === 'fyp-project' && (
                   <Badge variant="outline" className="text-sm">
                     Academic Project
                   </Badge>
@@ -57,7 +60,9 @@ export function ProjectHero({ project }: ProjectHeroProps) {
 
               <h1 className="text-4xl md:text-5xl font-bold text-balance">{project.title}</h1>
 
-              <p className="text-xl text-muted-foreground text-pretty leading-relaxed">{project.longDescription}</p>
+              <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
+                {project.longDescription}
+              </p>
             </div>
 
             {/* Project Meta */}
@@ -73,7 +78,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
                   <span className="text-muted-foreground">Role:</span>
                   <span className="font-medium">{project.role}</span>
                 </div>
-                {project.slug === "sop-management-app" && (
+                {project.slug === 'sop-management-app' && (
                   <div className="flex items-center gap-2 text-sm">
                     <MapPin className="h-4 w-4 text-muted-foreground" />
                     <span className="text-muted-foreground">Company:</span>
@@ -85,7 +90,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
               <div className="space-y-3">
                 <h3 className="font-semibold text-sm">Technologies</h3>
                 <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
+                  {project.technologies.map(tech => (
                     <Badge key={tech} variant="outline" className="text-xs">
                       {tech}
                     </Badge>
@@ -100,7 +105,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
                 <Button asChild className="focus-ring">
                   <Link href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
-                    {project.slug === "fyp-project" ? "View FYP Document" : "View Code"}
+                    {project.slug === 'fyp-project' ? 'View FYP Document' : 'View Code'}
                   </Link>
                 </Button>
               )}
@@ -127,18 +132,6 @@ export function ProjectHero({ project }: ProjectHeroProps) {
                 </Button>
               )}
             </div>
-
-            {/* Special note for FYP */}
-            {project.slug === "fyp-project" && (
-              <div className="p-4 rounded-lg bg-muted/50 border border-border/50">
-                <h3 className="font-semibold mb-2 text-orange-400">Project Status</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  This Final Year Project is currently under development. The linked document contains the project
-                  proposal, research findings, and planned implementation details. The project demonstrates advanced
-                  mobile development concepts and academic research methodology.
-                </p>
-              </div>
-            )}
           </motion.div>
 
           {/* Project Image */}
@@ -150,7 +143,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           >
             <div className="relative overflow-hidden rounded-lg">
               <Image
-                src={project.featuredImage || "/placeholder.svg"}
+                src={project.featuredImage || '/placeholder.svg'}
                 alt={project.title}
                 width={600}
                 height={400}
