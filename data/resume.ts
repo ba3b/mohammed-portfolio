@@ -12,7 +12,7 @@ export const resumeData: ResumeData = {
     {
       company: 'Ventionex Sdn. Bhd.',
       role: 'Full Stack Mobile Application Developer',
-      duration: '2024 - Present (~1 year)',
+      duration: 'Sep 2024 - Sep 2025 (~1 year)',
       location: 'Malaysia',
       description: 'Led UI/UX and frontend implementation for in-house SOP management application',
       achievements: [
@@ -41,7 +41,7 @@ export const resumeData: ResumeData = {
     {
       degree: 'Bachelor of Computer Science',
       school: 'UTM',
-      year: '2025',
+      year: '2021 - 2025',
       location: 'Malaysia',
     },
   ],

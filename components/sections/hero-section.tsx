@@ -166,12 +166,6 @@ export function HeroSection() {
                 </div>
                 <div className="text-sm text-muted-foreground">Year Experience</div>
               </div>
-              <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                  2
-                </div>
-                <div className="text-sm text-muted-foreground">Platforms</div>
-              </div>
             </motion.div>
           </motion.div>
 

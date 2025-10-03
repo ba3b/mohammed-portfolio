@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { Calendar, MapPin } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { resumeData } from "@/data/resume"
+import { motion } from 'framer-motion'
+import { Calendar, MapPin } from 'lucide-react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { resumeData } from '@/data/resume'
 
 export function ExperienceTimeline() {
   return (
@@ -19,8 +19,8 @@ export function ExperienceTimeline() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
           <p className="text-muted-foreground max-w-2xl">
-            My professional journey in mobile application development, highlighting key achievements and technologies
-            I've worked with.
+            My professional journey in mobile application development, highlighting key achievements
+            and technologies I've worked with.
           </p>
         </motion.div>
 
@@ -71,7 +71,10 @@ export function ExperienceTimeline() {
                         <h4 className="font-semibold mb-2 text-sm">Key Achievements</h4>
                         <ul className="space-y-2">
                           {exp.achievements.map((achievement, achievementIndex) => (
-                            <li key={achievementIndex} className="text-sm text-muted-foreground flex items-start gap-2">
+                            <li
+                              key={achievementIndex}
+                              className="text-sm text-muted-foreground flex items-start gap-2"
+                            >
                               <span className="text-green-400 mt-1">•</span>
                               <span>{achievement}</span>
                             </li>
@@ -82,7 +85,7 @@ export function ExperienceTimeline() {
                       <div>
                         <h4 className="font-semibold mb-3 text-sm">Technologies Used</h4>
                         <div className="flex flex-wrap gap-2">
-                          {exp.technologies.map((tech) => (
+                          {exp.technologies.map(tech => (
                             <Badge key={tech} variant="outline" className="text-xs">
                               {tech}
                             </Badge>
@@ -111,21 +114,25 @@ export function ExperienceTimeline() {
                     <div>
                       <h3 className="text-xl font-bold text-foreground mb-1">Education</h3>
                       <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                        <span className="font-medium">{resumeData.education[0]?.degree || "Bachelor's Degree"}</span>
+                        <span className="font-medium">
+                          {resumeData.education[0]?.degree || "Bachelor's Degree"}
+                        </span>
                         <span>•</span>
                         <div className="flex items-center gap-1">
                           <MapPin className="h-3 w-3" />
-                          <span className="text-sm">{resumeData.education[0]?.location || "Malaysia"}</span>
+                          <span className="text-sm">
+                            {resumeData.education[0]?.location || 'Malaysia'}
+                          </span>
                         </div>
                       </div>
                       <p className="text-sm text-muted-foreground">
-                        {resumeData.education[0]?.school || "University Name"} • Completed Final Year Project focusing
-                        on advanced mobile application development
+                        {resumeData.education[0]?.school || 'University Name'} • Studied a complete
+                        computer science degree with a focus on mobile application development.
                       </p>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground whitespace-nowrap">
                       <Calendar className="h-4 w-4" />
-                      <span>{resumeData.education[0]?.year || "2024"}</span>
+                      <span>{resumeData.education[0]?.year || '2024'}</span>
                     </div>
                   </div>
                 </CardContent>
