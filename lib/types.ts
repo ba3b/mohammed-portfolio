@@ -10,7 +10,7 @@ export interface Project {
   demo?: string
   playstore?: string
   appstore?: string
-  status: "completed" | "in-progress" | "planned"
+  status: 'completed' | 'in-progress' | 'planned'
   timeline: string
   role: string
   technologies: string[]
@@ -33,8 +33,8 @@ export interface Experience {
 
 export interface Skill {
   name: string
-  category: "mobile" | "frontend" | "backend" | "tools" | "design"
-  proficiency: number
+  category: 'mobile' | 'frontend' | 'backend' | 'tools' | 'design'
+  proficiency: 'expert' | 'proficient' | 'competent' | 'beginner'
   icon?: string
 }
 
