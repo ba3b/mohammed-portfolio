@@ -179,7 +179,9 @@ export function HeroSection() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
             <div className="relative w-full h-full overflow-hidden rounded-lg">
-              <Spline scene="https://prod.spline.design/brHyJLJi0GtBCfa3/scene.splinecode" />
+              <div className="relative w-full h-[110%] -mb-[10%]">
+                <Spline scene="https://prod.spline.design/brHyJLJi0GtBCfa3/scene.splinecode" />
+              </div>
             </div>
           </motion.div>
         </div>
