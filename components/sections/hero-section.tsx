@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Download, Github, Linkedin, MapPin, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-
 import Link from 'next/link'
+// @ts-ignore
+import Spline from '@splinetool/react-spline'
 
 export function HeroSection() {
   const containerVariants = {
@@ -177,7 +178,9 @@ export function HeroSection() {
             className="relative h-[600px] lg:h-[700px] flex items-center justify-center"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
-            <div className="text-white/50 text-lg">3D Component Removed</div>
+            <div className="relative w-full h-full overflow-hidden rounded-lg">
+              <Spline scene="https://prod.spline.design/brHyJLJi0GtBCfa3/scene.splinecode" />
+            </div>
           </motion.div>
         </div>
       </div>
