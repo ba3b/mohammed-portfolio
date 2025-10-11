@@ -18,9 +18,8 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
           {/* Key Highlights */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="space-y-8"
           >
             <div>
@@ -30,9 +29,8 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
                     className="flex items-start gap-3"
                   >
                     <CheckCircle className="h-5 w-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -61,9 +59,8 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
           {/* Project Insights */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
             className="space-y-6"
           >
             {/* Problem Statement */}
@@ -78,8 +75,8 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                     'Enterprise mobile applications require complex state management, real-time updates, and intuitive user interfaces. The challenge was building a comprehensive SOP management system that could handle complex workflows while maintaining excellent user experience.'}
                   {project.slug === 'fyp-project' &&
                     'Academic projects require balancing theoretical research with practical implementation. The challenge was designing a mobile application that demonstrates advanced development concepts while solving a real-world problem.'}
-                  {project.slug === 'openmp-lab' &&
-                    'Parallel programming requires understanding of concurrent execution, thread safety, and performance optimization. The challenge was implementing efficient algorithms that leverage multi-core processors effectively.'}
+                  {project.slug === 'utmdash' &&
+                    'UTM students living on campus faced a significant problem with parcel delivery as there was no proper system to receive packages. Manual warehouse processes were inefficient and time-consuming, requiring a comprehensive solution to automate shipment organization.'}
                 </p>
               </CardContent>
             </Card>
@@ -96,8 +93,8 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                     'Built a comprehensive mobile application using React Native and Expo, featuring reusable timeline components, interactive dialogs, and a sophisticated resolution system. Implemented skeleton loading states and optimized performance for enterprise use.'}
                   {project.slug === 'fyp-project' &&
                     'Developing a research-focused mobile application that combines academic rigor with practical implementation. The project showcases advanced UI/UX patterns and backend integration strategies.'}
-                  {project.slug === 'openmp-lab' &&
-                    'Implemented parallel algorithms using OpenMP directives, focusing on performance benchmarking and optimization techniques. Demonstrated understanding of concurrent programming principles and multi-threading best practices.'}
+                  {project.slug === 'utmdash' &&
+                    'Developed a Flutter-based mobile application with Firebase backend integration, featuring real-time shipment tracking, automated warehouse management, and secure authentication. Created an intuitive interface for both students and warehouse staff to manage parcels efficiently.'}
                 </p>
               </CardContent>
             </Card>
@@ -114,8 +111,8 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                     'Successfully delivered a production-ready mobile application that improved workflow efficiency and user satisfaction. The component system became reusable across other company projects, demonstrating scalable architecture.'}
                   {project.slug === 'fyp-project' &&
                     'Project is currently in development phase with comprehensive documentation and research findings. Expected to demonstrate advanced mobile development concepts and contribute to academic knowledge in the field.'}
-                  {project.slug === 'openmp-lab' &&
-                    'Achieved significant performance improvements through parallel processing, with detailed analysis of speedup and efficiency metrics. Demonstrated mastery of concurrent programming concepts.'}
+                  {project.slug === 'utmdash' &&
+                    'Successfully automated all manual warehouse processes, providing UTM students with a reliable solution for receiving parcels on campus. The application streamlined shipment organization and significantly improved the delivery experience for the campus community.'}
                 </p>
               </CardContent>
             </Card>

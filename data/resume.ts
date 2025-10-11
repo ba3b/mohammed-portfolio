@@ -50,6 +50,13 @@ export const resumeData: ResumeData = {
     { name: 'UI/UX Design', category: 'design', proficiency: 'proficient' as const },
     { name: 'Git', category: 'tools', proficiency: 'proficient' as const },
     { name: 'Figma', category: 'design', proficiency: 'competent' as const },
+    { name: 'PHP', category: 'backend', proficiency: 'competent' as const },
+    { name: 'PostgreSQL', category: 'backend', proficiency: 'competent' as const },
+    { name: 'RESTful APIs', category: 'backend', proficiency: 'proficient' as const },
+    { name: 'Flask', category: 'backend', proficiency: 'competent' as const },
+    { name: 'Agile Methodologies', category: 'tools', proficiency: 'competent' as const },
+    { name: 'English', category: 'language', proficiency: 'expert' as const },
+    { name: 'Arabic', category: 'language', proficiency: 'expert' as const },
   ],
   education: [
     {

@@ -40,24 +40,6 @@ export function ProjectHero({ project }: ProjectHeroProps) {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Badge
-                  variant={project.status === 'completed' ? 'default' : 'secondary'}
-                  className="text-sm"
-                >
-                  {project.status === 'completed'
-                    ? 'Live Project'
-                    : project.status === 'in-progress'
-                    ? 'In Progress'
-                    : 'Planned'}
-                </Badge>
-                {project.status === 'in-progress' && project.slug === 'fyp-project' && (
-                  <Badge variant="outline" className="text-sm">
-                    Academic Project
-                  </Badge>
-                )}
-              </div>
-
               <h1 className="text-4xl md:text-5xl font-bold text-balance">{project.title}</h1>
 
               <p className="text-xl text-muted-foreground text-pretty leading-relaxed">

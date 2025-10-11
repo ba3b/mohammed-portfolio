@@ -1,44 +1,43 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Search, Filter, ExternalLink, Github, Calendar, User } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
-import Image from "next/image"
-import { projects } from "@/data/projects"
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Search, Filter, ExternalLink, Github, Calendar, User } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+import Image from 'next/image'
+import { projects } from '@/data/projects'
 
-const allTags = Array.from(new Set(projects.flatMap((project) => project.tags)))
+const allTags = Array.from(new Set(projects.flatMap(project => project.tags)))
 
 export function ProjectsGrid() {
-  const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState('')
   const [selectedTags, setSelectedTags] = useState<string[]>([])
-  const [sortBy, setSortBy] = useState<"recent" | "title" | "status">("recent")
+  const [sortBy, setSortBy] = useState<'recent' | 'title'>('recent')
 
   const filteredProjects = projects
-    .filter((project) => {
+    .filter(project => {
       const matchesSearch =
         project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.description.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesTags = selectedTags.length === 0 || selectedTags.some((tag) => project.tags.includes(tag))
+      const matchesTags =
+        selectedTags.length === 0 || selectedTags.some(tag => project.tags.includes(tag))
       return matchesSearch && matchesTags
     })
     .sort((a, b) => {
       switch (sortBy) {
-        case "title":
+        case 'title':
           return a.title.localeCompare(b.title)
-        case "status":
-          return a.status === "completed" ? -1 : 1
         default:
           return 0 // Keep original order for "recent"
       }
     })
 
   const toggleTag = (tag: string) => {
-    setSelectedTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]))
+    setSelectedTags(prev => (prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]))
   }
 
   return (
@@ -58,34 +57,26 @@ export function ProjectsGrid() {
               <Input
                 placeholder="Search projects..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={e => setSearchTerm(e.target.value)}
                 className="pl-10 focus-ring"
               />
             </div>
             <div className="flex gap-2">
               <Button
-                variant={sortBy === "recent" ? "default" : "outline"}
-                onClick={() => setSortBy("recent")}
+                variant={sortBy === 'recent' ? 'default' : 'outline'}
+                onClick={() => setSortBy('recent')}
                 size="sm"
                 className="focus-ring"
               >
                 Recent
               </Button>
               <Button
-                variant={sortBy === "title" ? "default" : "outline"}
-                onClick={() => setSortBy("title")}
+                variant={sortBy === 'title' ? 'default' : 'outline'}
+                onClick={() => setSortBy('title')}
                 size="sm"
                 className="focus-ring"
               >
                 A-Z
-              </Button>
-              <Button
-                variant={sortBy === "status" ? "default" : "outline"}
-                onClick={() => setSortBy("status")}
-                size="sm"
-                className="focus-ring"
-              >
-                Status
               </Button>
             </div>
           </div>
@@ -97,10 +88,10 @@ export function ProjectsGrid() {
               <span className="text-sm font-medium">Filter by technology:</span>
             </div>
             <div className="flex flex-wrap gap-2">
-              {allTags.map((tag) => (
+              {allTags.map(tag => (
                 <Button
                   key={tag}
-                  variant={selectedTags.includes(tag) ? "default" : "outline"}
+                  variant={selectedTags.includes(tag) ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => toggleTag(tag)}
                   className="focus-ring text-xs"
@@ -109,7 +100,12 @@ export function ProjectsGrid() {
                 </Button>
               ))}
               {selectedTags.length > 0 && (
-                <Button variant="ghost" size="sm" onClick={() => setSelectedTags([])} className="focus-ring text-xs">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setSelectedTags([])}
+                  className="focus-ring text-xs"
+                >
                   Clear all
                 </Button>
               )}
@@ -136,25 +132,13 @@ export function ProjectsGrid() {
                   {/* Project Image */}
                   <div className="relative overflow-hidden rounded-t-lg">
                     <Image
-                      src={project.featuredImage || "/placeholder.svg"}
+                      src={project.featuredImage || '/placeholder.svg'}
                       alt={project.title}
                       width={400}
                       height={250}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute top-4 right-4">
-                      <Badge
-                        variant={project.status === "completed" ? "default" : "secondary"}
-                        className="bg-background/80 backdrop-blur-sm"
-                      >
-                        {project.status === "completed"
-                          ? "Live"
-                          : project.status === "in-progress"
-                            ? "In Progress"
-                            : "Planned"}
-                      </Badge>
-                    </div>
                   </div>
 
                   {/* Project Content */}
@@ -183,7 +167,7 @@ export function ProjectsGrid() {
                         </div>
 
                         <div className="flex flex-wrap gap-2">
-                          {project.tags.slice(0, 3).map((tag) => (
+                          {project.tags.slice(0, 3).map(tag => (
                             <Badge key={tag} variant="outline" className="text-xs">
                               {tag}
                             </Badge>
@@ -230,13 +214,19 @@ export function ProjectsGrid() {
 
         {/* Empty State */}
         {filteredProjects.length === 0 && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-16"
+          >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-xl font-semibold mb-2">No projects found</h3>
-            <p className="text-muted-foreground mb-4">Try adjusting your search terms or clearing the filters.</p>
+            <p className="text-muted-foreground mb-4">
+              Try adjusting your search terms or clearing the filters.
+            </p>
             <Button
               onClick={() => {
-                setSearchTerm("")
+                setSearchTerm('')
                 setSelectedTags([])
               }}
               className="focus-ring"

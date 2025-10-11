@@ -8,13 +8,14 @@ import { ProjectNavigation } from '@/components/sections/project-navigation'
 import { projects } from '@/data/projects'
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const project = projects.find(p => p.slug === params.slug)
+  const { slug } = await params
+  const project = projects.find(p => p.slug === slug)
 
   if (!project) {
     return {
@@ -39,8 +40,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find(p => p.slug === params.slug)
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params
+  const project = projects.find(p => p.slug === slug)
 
   if (!project) {
     notFound()
@@ -53,7 +55,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <ProjectHero project={project} />
         <ProjectDetails project={project} />
         <ProjectGallery project={project} />
-        <ProjectNavigation currentSlug={params.slug} />
+        <ProjectNavigation currentSlug={slug} />
       </main>
     </>
   )

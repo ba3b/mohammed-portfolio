@@ -12,6 +12,7 @@ const categoryColors = {
   backend: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
   tools: 'bg-orange-500/10 text-orange-400 border-orange-500/20',
   design: 'bg-pink-500/10 text-pink-400 border-pink-500/20',
+  language: 'bg-teal-500/10 text-teal-400 border-teal-500/20',
 }
 
 const categoryLabels = {
@@ -20,6 +21,7 @@ const categoryLabels = {
   backend: 'Backend',
   tools: 'Tools & DevOps',
   design: 'Design',
+  language: 'Languages',
 }
 
 const proficiencyConfig = {
