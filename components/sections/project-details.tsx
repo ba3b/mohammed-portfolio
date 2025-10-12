@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { CheckCircle, Code, Lightbulb, Target } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { CheckCircle, Code, Lightbulb, Target, ExternalLink, Github } from 'lucide-react'
 import type { Project } from '@/lib/types'
 
 interface ProjectDetailsProps {
@@ -11,9 +12,49 @@ interface ProjectDetailsProps {
 }
 
 export function ProjectDetails({ project }: ProjectDetailsProps) {
+  // Determine if we should show any action buttons
+  const hasWebsiteOrAppLink = project.demo || project.playstore || project.appstore
+  const hasGithubLink = project.github
+  const hasAnyLink = hasWebsiteOrAppLink || hasGithubLink
+
+  // Get the primary external link (prioritize demo, then playstore, then appstore)
+  const externalLink = project.demo || project.playstore || project.appstore
+  const externalLinkLabel = project.playstore
+    ? 'View on Google Play'
+    : project.appstore
+    ? 'View on App Store'
+    : 'View Website'
+
   return (
     <section className="py-16 bg-muted/20">
       <div className="container mx-auto px-4">
+        {/* Action Buttons */}
+        {hasAnyLink && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-wrap gap-4 mb-12 justify-center"
+          >
+            {hasWebsiteOrAppLink && (
+              <Button asChild size="lg" className="gap-2">
+                <a href={externalLink} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-4 w-4" />
+                  {externalLinkLabel}
+                </a>
+              </Button>
+            )}
+            {hasGithubLink && (
+              <Button asChild size="lg" variant="outline" className="gap-2">
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <Github className="h-4 w-4" />
+                  View Source Code
+                </a>
+              </Button>
+            )}
+          </motion.div>
+        )}
+
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Key Highlights */}
           <motion.div
@@ -73,10 +114,11 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {project.slug === 'mobile-unified-platform' &&
                     'Enterprise mobile applications require complex state management, real-time updates, and intuitive user interfaces. The challenge was building a comprehensive SOP management system that could handle complex workflows while maintaining excellent user experience.'}
-                  {project.slug === 'fyp-project' &&
-                    'Academic projects require balancing theoretical research with practical implementation. The challenge was designing a mobile application that demonstrates advanced development concepts while solving a real-world problem.'}
+
                   {project.slug === 'utmdash' &&
                     'UTM students living on campus faced a significant problem with parcel delivery as there was no proper system to receive packages. Manual warehouse processes were inefficient and time-consuming, requiring a comprehensive solution to automate shipment organization.'}
+                  {project.slug === 'fyp-project' &&
+                    'Clinics and hospitals needed a simple and safe way to handle patients, do online consultations, and keep all records in one place. The goal was to build an easy virtual clinic for bookings, video calls, chats, and basic record keeping while protecting patient data.'}
                 </p>
               </CardContent>
             </Card>
@@ -91,10 +133,11 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {project.slug === 'mobile-unified-platform' &&
                     'Built a comprehensive mobile application using React Native and Expo, featuring reusable timeline components, interactive dialogs, and a sophisticated resolution system. Implemented skeleton loading states and optimized performance for enterprise use.'}
-                  {project.slug === 'fyp-project' &&
-                    'Developing a research-focused mobile application that combines academic rigor with practical implementation. The project showcases advanced UI/UX patterns and backend integration strategies.'}
+
                   {project.slug === 'utmdash' &&
                     'Developed a Flutter-based mobile application with Firebase backend integration, featuring real-time shipment tracking, automated warehouse management, and secure authentication. Created an intuitive interface for both students and warehouse staff to manage parcels efficiently.'}
+                  {project.slug === 'fyp-project' &&
+                    'Built a mobile app so patients could book appointments, join video calls, and message clinicians. Added secure login, simple access controls, appointment management, and a central place for patient notes. The focus was reliability and a clear, accessible interface.'}
                 </p>
               </CardContent>
             </Card>
@@ -110,7 +153,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                   {project.slug === 'mobile-unified-platform' &&
                     'Successfully delivered a production-ready mobile application that improved workflow efficiency and user satisfaction. The component system became reusable across other company projects, demonstrating scalable architecture.'}
                   {project.slug === 'fyp-project' &&
-                    'Project is currently in development phase with comprehensive documentation and research findings. Expected to demonstrate advanced mobile development concepts and contribute to academic knowledge in the field.'}
+                    'A small clinic test showed fewer missed appointments and quicker patient check-ins. Doctors handled more online visits, and staff spent less time on paperwork. Patient data stayed safe with the new system.'}
                   {project.slug === 'utmdash' &&
                     'Successfully automated all manual warehouse processes, providing UTM students with a reliable solution for receiving parcels on campus. The application streamlined shipment organization and significantly improved the delivery experience for the campus community.'}
                 </p>

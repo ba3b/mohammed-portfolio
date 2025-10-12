@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Download, MapPin, Mail, Calendar, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { resumeData } from '@/data/resume'
 
 export function AboutHero() {
   return (
@@ -52,9 +53,11 @@ export function AboutHero() {
                   </div>
                 </div>
 
-                <Button className="w-full mt-6 focus-ring">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Resume
+                <Button className="w-full mt-6 focus-ring" asChild>
+                  <a href={resumeData.resumeUrl} download>
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Resume
+                  </a>
                 </Button>
               </CardContent>
             </Card>

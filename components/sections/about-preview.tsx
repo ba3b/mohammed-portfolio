@@ -23,7 +23,7 @@ const skills = [
   {
     icon: Code,
     title: 'Backend Development',
-    description: 'Express.js, PHP',
+    description: 'Express.js, PHP, Flask',
     color: 'text-purple-400',
   },
 ]

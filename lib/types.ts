@@ -53,4 +53,10 @@ export interface ResumeData {
     year: string
     location: string
   }[]
+  resumeUrl: string
+  social: {
+    github: string
+    linkedin: string
+    whatsapp: string
+  }
 }

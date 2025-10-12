@@ -87,7 +87,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
                 <Button asChild className="focus-ring">
                   <Link href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
-                    {project.slug === 'fyp-project' ? 'View FYP Document' : 'View Code'}
+                    View Source Code
                   </Link>
                 </Button>
               )}

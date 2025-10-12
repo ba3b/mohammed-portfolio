@@ -66,4 +66,10 @@ export const resumeData: ResumeData = {
       location: 'Malaysia',
     },
   ],
+  resumeUrl: '/resume.pdf',
+  social: {
+    github: 'https://github.com/ba3b',
+    linkedin: 'https://www.linkedin.com/in/mohammed-ba-abbad-2263b0196/',
+    whatsapp: 'https://wa.me/966509473092',
+  },
 }

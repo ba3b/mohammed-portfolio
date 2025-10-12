@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { resumeData } from '@/data/resume'
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -74,9 +75,11 @@ export function Navigation() {
               <span className="sr-only">Toggle theme</span>
             </Button>
 
-            <Button variant="outline" size="sm" className="focus-ring bg-transparent">
-              <Download className="mr-2 h-4 w-4" />
-              Resume
+            <Button variant="outline" size="sm" className="focus-ring bg-transparent" asChild>
+              <a href={resumeData.resumeUrl} download>
+                <Download className="mr-2 h-4 w-4" />
+                Resume
+              </a>
             </Button>
           </div>
 
@@ -123,9 +126,11 @@ export function Navigation() {
                     <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                     <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                   </Button>
-                  <Button variant="outline" size="sm" className="focus-ring bg-transparent">
-                    <Download className="mr-2 h-4 w-4" />
-                    Resume
+                  <Button variant="outline" size="sm" className="focus-ring bg-transparent" asChild>
+                    <a href={resumeData.resumeUrl} download>
+                      <Download className="mr-2 h-4 w-4" />
+                      Resume
+                    </a>
                   </Button>
                 </div>
               </div>

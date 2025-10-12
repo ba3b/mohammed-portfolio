@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: 'Timezone',
-    value: 'GMT+3 (MYT)',
+    value: 'GMT+3 (Riyadh)',
     href: null,
   },
 ]

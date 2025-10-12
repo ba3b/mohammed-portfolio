@@ -5,6 +5,7 @@ import { ArrowRight, Mail, MapPin, Calendar } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import Link from 'next/link'
+import { resumeData } from '@/data/resume'
 
 export function ContactPreview() {
   return (
@@ -65,7 +66,9 @@ export function ContactPreview() {
             </Button>
 
             <Button asChild variant="outline" size="lg" className="focus-ring bg-transparent">
-              <Link href="/about">Download Resume</Link>
+              <a href={resumeData.resumeUrl} download>
+                Download Resume
+              </a>
             </Button>
           </div>
         </motion.div>

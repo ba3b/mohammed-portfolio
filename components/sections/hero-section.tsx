@@ -1,9 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Download, Github, Linkedin, MapPin, Mail } from 'lucide-react'
+import { ArrowRight, Download, Github, Linkedin, MapPin, Mail, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { resumeData } from '@/data/resume'
 // @ts-ignore
 import Spline from '@splinetool/react-spline'
 
@@ -127,9 +128,12 @@ export function HeroSection() {
                 variant="outline"
                 size="lg"
                 className="focus-ring bg-background/50 backdrop-blur-sm"
+                asChild
               >
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
+                <a href={resumeData.resumeUrl} download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume
+                </a>
               </Button>
             </motion.div>
 
@@ -139,13 +143,23 @@ export function HeroSection() {
               transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
               className="flex gap-3"
             >
-              <Button variant="ghost" size="icon" className="focus-ring hover:bg-muted/50">
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
+              <Button variant="ghost" size="icon" className="focus-ring hover:bg-muted/50" asChild>
+                <a href={resumeData.social.github} target="_blank" rel="noopener noreferrer">
+                  <Github className="h-5 w-5" />
+                  <span className="sr-only">GitHub</span>
+                </a>
               </Button>
-              <Button variant="ghost" size="icon" className="focus-ring hover:bg-muted/50">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
+              <Button variant="ghost" size="icon" className="focus-ring hover:bg-muted/50" asChild>
+                <a href={resumeData.social.linkedin} target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="h-5 w-5" />
+                  <span className="sr-only">LinkedIn</span>
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" className="focus-ring hover:bg-muted/50" asChild>
+                <a href={resumeData.social.whatsapp} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="h-5 w-5" />
+                  <span className="sr-only">WhatsApp</span>
+                </a>
               </Button>
             </motion.div>
 

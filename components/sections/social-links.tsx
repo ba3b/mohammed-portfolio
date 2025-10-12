@@ -3,32 +3,27 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Github, Linkedin, Twitter, Instagram } from 'lucide-react'
+import { Github, Linkedin, Twitter, Instagram, MessageCircle } from 'lucide-react'
+import { resumeData } from '@/data/resume'
 
 const socialLinks = [
   {
     name: 'GitHub',
     icon: Github,
-    href: 'https://github.com/mohammed-Baabbad',
+    href: resumeData.social.github,
     color: 'hover:text-gray-900 dark:hover:text-gray-100',
   },
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    href: 'https://linkedin.com/in/mohammed-Baabbad',
+    href: resumeData.social.linkedin,
     color: 'hover:text-blue-600',
   },
   {
-    name: 'Twitter',
-    icon: Twitter,
-    href: 'https://twitter.com/mohammed_Baabbad',
-    color: 'hover:text-blue-400',
-  },
-  {
-    name: 'Instagram',
-    icon: Instagram,
-    href: 'https://instagram.com/mohammed.Baabbad',
-    color: 'hover:text-pink-600',
+    name: 'WhatsApp',
+    icon: MessageCircle,
+    href: resumeData.social.whatsapp,
+    color: 'hover:text-green-600',
   },
 ]
 
@@ -67,7 +62,8 @@ export function SocialLinks() {
 
           <div className="mt-6 p-4 bg-muted/50 rounded-lg">
             <p className="text-sm text-muted-foreground text-center">
-              Follow me for updates on mobile development, tech insights, and project showcases.
+              Connect with me for updates on mobile development, tech insights, and project
+              showcases.
             </p>
           </div>
         </CardContent>

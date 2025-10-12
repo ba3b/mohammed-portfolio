@@ -16,6 +16,8 @@ export const projects: Project[] = [
       '/images/projects/sop-resolution.jpg',
       '/images/projects/sop-chat.jpg',
     ],
+    playstore:
+      'https://play.google.com/store/apps/details?id=com.dev_simpnify.mobilesimpleunifiedplatform',
     timeline: '1 year',
     role: 'Full Stack Mobile Application Developer',
     technologies: [
@@ -56,6 +58,8 @@ export const projects: Project[] = [
     tags: ['Flutter', 'Healthcare', 'Agora'],
     featuredImage: '/images/projects/fyp-hero.png',
     images: ['/images/projects/fyp-preview.png', '/images/projects/fyp-call.png'],
+    github: 'https://github.com/ba3b/Virtual-Clinic-System',
+    demo: 'https://drive.google.com/file/d/1fkGSi9838XaezjUeZ2Q_inK7oH51Q3Ga/view?usp=sharing',
     timeline: 'Mar - Jul 2025',
     role: 'Solo Developer & Researcher',
     technologies: ['Flutter', 'Dart', 'Firestore', 'Agora SDK', 'Firebase Auth'],
@@ -81,6 +85,7 @@ export const projects: Project[] = [
     tags: ['Flutter', 'Dart', 'Firebase', 'Automation'],
     featuredImage: '/images/projects/utmdash.jpg',
     images: ['/images/projects/utmdash-2.jpg', '/images/projects/utmdash-3.jpg'],
+    github: 'https://github.com/NotWai/UTMDash',
     timeline: 'Oct 2023 - Feb 2024',
     role: 'Developer & Team Member',
     technologies: ['Flutter', 'Dart', 'Firebase Firestore', 'Firebase Authentication'],
