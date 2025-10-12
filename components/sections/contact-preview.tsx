@@ -27,7 +27,7 @@ export function ContactPreview() {
 
           <p className="text-lg text-muted-foreground mb-12 text-pretty">
             I'm always interested in new opportunities and exciting projects. Whether you're looking
-            for a mobile developer or want to discuss a potential collaboration, I'd love to hear
+            for a mobile engineer or want to discuss a potential collaboration, I'd love to hear
             from you.
           </p>
 

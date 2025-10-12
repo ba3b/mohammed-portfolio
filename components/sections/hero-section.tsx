@@ -68,7 +68,7 @@ export function HeroSection() {
 
               <motion.div variants={itemVariants} className="space-y-2">
                 <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
-                  Mobile Application Developer
+                  Mobile Engineer
                 </h2>
                 <div className="flex items-center gap-4 text-muted-foreground">
                   <div className="flex items-center gap-1">
@@ -103,7 +103,7 @@ export function HeroSection() {
               <div className="text-sm text-muted-foreground mb-1">Worked at</div>
               <div className="font-semibold text-foreground">Ventionex Sdn. Bhd.</div>
               <div className="text-sm text-muted-foreground">
-                Full Stack Mobile Application Developer • ~1 year
+                Full Stack Mobile Engineer • ~1 year
               </div>
             </motion.div>
 

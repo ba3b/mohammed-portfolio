@@ -2,16 +2,16 @@ import type { ResumeData } from '@/lib/types'
 
 export const resumeData: ResumeData = {
   name: 'Mohammed Baabbad',
-  title: 'Mobile Application Developer',
+  title: 'Mobile Engineer',
   location: 'Saudi Arabia',
   email: 'mbaabad1234@gmail.com',
   website: 'https://mohammed-baabbad.vercel.app',
   summary:
-    'Mobile Application Developer building production apps with React Native and Flutter. UI-led, performance-first, production-ready solutions with nearly 1 year of professional experience.',
+    'Mobile Engineer building production apps with React Native and Flutter. UI-led, performance-first, production-ready solutions with nearly 1 year of professional experience.',
   experience: [
     {
       company: 'Ventionex Sdn. Bhd.',
-      role: 'Full Stack Mobile Application Developer',
+      role: 'Full Stack Mobile Engineer',
       duration: 'Sep 2024 - Sep 2025 (~1 year)',
       location: 'Malaysia',
       description: 'Led UI/UX and frontend implementation for in-house SOP management application',

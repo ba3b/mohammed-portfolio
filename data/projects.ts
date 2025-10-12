@@ -19,7 +19,7 @@ export const projects: Project[] = [
     playstore:
       'https://play.google.com/store/apps/details?id=com.dev_simpnify.mobilesimpleunifiedplatform',
     timeline: '1 year',
-    role: 'Full Stack Mobile Application Developer',
+    role: 'Full Stack Mobile Engineer',
     technologies: [
       'React Native',
       'Expo',

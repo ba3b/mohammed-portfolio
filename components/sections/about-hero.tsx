@@ -27,7 +27,7 @@ export function AboutHero() {
                     </div>
                   </div>
                   <h1 className="text-2xl font-bold mb-2">Mohammed Baabbad</h1>
-                  <p className="text-muted-foreground mb-4">Mobile Application Developer</p>
+                  <p className="text-muted-foreground mb-4">Mobile Engineer</p>
                   <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-2">
                     <MapPin className="h-4 w-4" />
                     <span>Saudia Arabia</span>
@@ -78,11 +78,10 @@ export function AboutHero() {
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a Mobile Application Developer passionate about crafting accessible,
-                pixel-perfect user interfaces that blend thoughtful design with robust engineering.
-                My favorite work lies at the intersection of design and development, creating
-                experiences that not only look great but are meticulously built for performance and
-                usability.
+                I'm a Mobile Engineer passionate about crafting accessible, pixel-perfect user
+                interfaces that blend thoughtful design with robust engineering. My favorite work
+                lies at the intersection of design and development, creating experiences that not
+                only look great but are meticulously built for performance and usability.
               </p>
             </div>
 
@@ -91,9 +90,9 @@ export function AboutHero() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-3 text-green-400">Current Focus</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Currently working as a Full Stack Mobile Application Developer at Ventionex Sdn.
-                    Bhd., specializing in React Native and Expo development. I contribute to the
-                    creation and maintenance of production mobile applications.
+                    Currently working as a Full Stack Mobile Engineer at Ventionex Sdn. Bhd.,
+                    specializing in React Native and Expo development. I contribute to the creation
+                    and maintenance of production mobile applications.
                   </p>
                 </CardContent>
               </Card>
@@ -102,7 +101,7 @@ export function AboutHero() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-3 text-blue-400">What I'm Looking For</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    I'm interested in roles that challenge me to grow as a mobile developer, working
+                    I'm interested in roles that challenge me to grow as a mobile engineer, working
                     on complex UI systems, performance optimization, and cross-platform solutions
                     that make a real impact.
                   </p>

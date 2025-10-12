@@ -49,9 +49,9 @@ export function AboutPreview() {
               </h2>
 
               <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
-                I'm a Mobile Application Developer passionate about crafting accessible,
-                pixel-perfect user interfaces that blend thoughtful design with robust engineering.
-                Currently building production apps at Ventionex Sdn. Bhd.
+                I'm a Mobile Engineer passionate about crafting accessible, pixel-perfect user
+                interfaces that blend thoughtful design with robust engineering. Currently building
+                production apps at Ventionex Sdn. Bhd.
               </p>
             </div>
 

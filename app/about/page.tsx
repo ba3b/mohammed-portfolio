@@ -8,7 +8,7 @@ import { Navigation } from '@/components/navigation'
 export const metadata: Metadata = {
   title: 'About - Mohammed Baabbad',
   description:
-    'Learn more about Mohammed Baabbad, Mobile Application Developer with expertise in React Native, Flutter, and modern UI development.',
+    'Learn more about Mohammed Baabbad, Mobile Engineer with expertise in React Native, Flutter, and modern UI development.',
 }
 
 export default function AboutPage() {
