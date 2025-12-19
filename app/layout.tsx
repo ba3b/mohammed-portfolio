@@ -4,6 +4,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { QueryProvider } from '@/components/query-provider'
+import { ChatbotWidget } from '@/components/chatbot-widget'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             disableTransitionOnChange={false}
           >
             {children}
+            <ChatbotWidget />
           </ThemeProvider>
         </QueryProvider>
       </body>
